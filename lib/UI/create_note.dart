@@ -1,5 +1,8 @@
+import 'package:everything_in_one_app/UI/add_note.dart';
+
 import 'package:flutter/material.dart';
 import 'package:everything_in_one_app/Route/routes.dart' as route;
+import 'package:intl/intl.dart';
 
 class CreateNotePage extends StatefulWidget {
   const CreateNotePage({Key? key}) : super(key: key);
@@ -56,7 +59,19 @@ class _CreateNotePageState extends State<CreateNotePage> {
                       borderRadius: BorderRadius.circular(100),
                     ),
                     child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          tempTitle = titleController.text;
+                          temptext = textController.text;
+                          var time = DateTime.now().toString();
+                          var part = time.split(" ");
+                          dateTime = part[0].trim();
+                          // DateFormat.yMd().format(dateTime);
+
+                          print(tempTitle);
+
+                          Navigator.pop(context);
+                          setState(() {});
+                        },
                         icon: const Icon(
                           Icons.save,
                           color: Colors.white,
@@ -98,13 +113,16 @@ class _CreateNotePageState extends State<CreateNotePage> {
                     hintText: "Enter your text",
                     border: OutlineInputBorder(borderSide: BorderSide.none)),
               ),
+              // Align(
+              //     alignment: Alignment.bottomLeft,
+              //     child: FloatingActionButton(onPressed: () {}))
             ],
           ),
         ),
-        floatingActionButton: FloatingActionButton(
+        floatingActionButton: ExtandableFab(
           onPressed: () {},
           child: const Icon(
-            Icons.imagesearch_roller,
+            Icons.image,
           ),
         ));
   }

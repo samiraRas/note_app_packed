@@ -15,8 +15,10 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Timer(Duration(seconds: 4),
-        () => Navigator.pushNamed(context, route.addNote));
+    Timer(
+        Duration(seconds: 1),
+        () => Navigator.of(context).pushNamedAndRemoveUntil(
+            route.addNote, (Route<dynamic> route) => false));
     super.initState();
   }
 
