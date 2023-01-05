@@ -2,6 +2,7 @@ import 'package:everything_in_one_app/UI/add_note.dart';
 
 import 'package:flutter/material.dart';
 import 'package:everything_in_one_app/Route/routes.dart' as route;
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:intl/intl.dart';
 
 class CreateNotePage extends StatefulWidget {
@@ -119,10 +120,19 @@ class _CreateNotePageState extends State<CreateNotePage> {
             ],
           ),
         ),
-        floatingActionButton: ExtandableFab(
-          onPressed: () {},
+        floatingActionButton: SpeedDial(
+          // onPressed: () {},
+          children: [
+            SpeedDialChild(
+              child: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.image_rounded),
+              ),
+            ),
+            SpeedDialChild(onTap: () {})
+          ],
           child: const Icon(
-            Icons.image,
+            Icons.imagesearch_roller,
           ),
         ));
   }

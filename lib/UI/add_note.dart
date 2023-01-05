@@ -101,18 +101,18 @@ class _AddNotePageState extends State<AddNotePage> {
                                               fontWeight: FontWeight.bold,
                                               color: Colors.black),
                                         ),
-                                  Spacer(),
+                                  const Spacer(),
                                   IconButton(
                                     onPressed: () {},
                                     icon: Container(
                                       height: 100,
                                       width: 100,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         shape: BoxShape.circle,
                                         color:
                                             Color.fromARGB(255, 97, 163, 238),
                                       ),
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.delete,
                                         size: 25,
                                         color: Colors.white,
@@ -126,22 +126,26 @@ class _AddNotePageState extends State<AddNotePage> {
                                 style: const TextStyle(fontSize: 18),
                               ),
                               const Spacer(),
+                              ElevatedButton(
+                                onPressed: () {},
+                                child: const Text("Location"),
+                              ),
                               Row(
                                 children: [
                                   // x == null ? Text("Date") : Text(x[0]),
                                   Text(dateTime),
-                                  Spacer(),
+                                  const Spacer(),
                                   IconButton(
                                     onPressed: () {},
                                     icon: Container(
                                       height: 100,
                                       width: 100,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         shape: BoxShape.circle,
                                         color:
                                             Color.fromARGB(255, 238, 107, 97),
                                       ),
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.edit,
                                         size: 25,
                                         color: Colors.white,
